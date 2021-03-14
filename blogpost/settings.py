@@ -25,7 +25,7 @@ SECRET_KEY = 'l1vo14)wf1+x7)%cd%l751pzn+pcjkd$n07cl_t3k=bal7vrjl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -84,6 +84,17 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'blogpost',
+#         'USER': 'blogpostuser',
+#         'PASSWORD': 'password',
+#         'HOST': '192.168.0.112',
+#         'PORT': '',
+#     }
+# }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -121,7 +132,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/home/amrit/Desktop/Linksmart/blogpost/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, "static") 
 
 LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'login'
